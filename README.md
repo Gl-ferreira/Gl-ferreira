@@ -22,7 +22,7 @@
 
 </td>
 <td>
-  <img src="https://raw.githubusercontent.com/Gl-ferreira/Gl-ferreira/main/data%20science%20and%20energy.jpeg" width="300"/>
+  <img src="https://raw.githubusercontent.com/Gl-ferreira/Gl-ferreira/main/data%20science%20and%20energy.jpeg"  height="300"/>
 </td>
 </tr>
 </table>
