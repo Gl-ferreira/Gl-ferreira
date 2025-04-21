@@ -1,13 +1,9 @@
 <table>
   <tr>
-    <td>
-
+    <td style="width:70%">
+      
 ## Hi, I'm Gonçalo 👋  
 **A Data Science and Energy enthusiast from Portugal**  
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Gl-ferreira/Gl-ferreira/main/data%20science%20and%20energy.jpeg" width="500" alt="Energy AI Banner"/>
-</p>
 
 
 <a href="https://www.linkedin.com/in/gon%C3%A7alo-ferreira-178083243/" target="_blank">
@@ -25,3 +21,9 @@
 
 - Fluent in Portuguese and English; currently at B1 level in German and actively improving through WTW’s internal language program.
 
+</td>
+    <td style="width:30%; text-align:center;">
+      <img src="https://raw.githubusercontent.com/Gl-ferreira/Gl-ferreira/main/data%20science%20and%20energy.jpeg" width="200" alt="Energy AI" />
+    </td>
+  </tr>
+</table>
