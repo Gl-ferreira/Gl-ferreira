@@ -29,5 +29,5 @@
 ![Machine Learning](https://img.shields.io/badge/Machine%20Learning-FF6F00?style=for-the-badge&logo=OpenAI&logoColor=white)  
 
 <p align="center">
-  <img src=
+  <img src="https://raw.githubusercontent.com/Gl-ferreira/Gl-ferreira/main/data%20science%20and%20energy.jpeg" width="500" alt="Energy Image"/>
 </p>
