@@ -10,7 +10,7 @@
 
 ### About Me:
 
-- As an **Actuarial Analyst** at **WTW Portugal**, I support pension **risk forecasting** through statistical analysis and large-scale data handling. I collaborate with German project experts and use Excel and MySQL to deliver consistent multi-company evaluations and **actionable insights**.
+- As an **Actuarial Analyst** at **WTW Portugal**, I support pension **risk forecasting** through statistical analysis and large-scale data handling. I collaborate with German project experts and use Excel and MySQL to deliver consistent **multi-company evaluations** and **actionable insights**.
 
 - I’m a second-year MSc student in **Data Science and Advanced Analytics**. Growing up on Madeira Island, I experienced the **real-world impact of energy challenges**, a perspective that now drives my thesis: *Forecasting the Distribution of Renewable Energy Sources’ Production in Madeira Island* to support **sustainable energy planning** and reduce the island's reliance on fossil fuels.
 
