@@ -1,5 +1,8 @@
-## Hi there 👋
+## Hi, I'm Gonçalo 👋
 
+**A Data Science enthusiast from Portugal**
+
+<a href="https://www.linkedin.com/in/gon%C3%A7alo-ferreira-178083243/" target="_blank">
 <!--
 **Gl-ferreira/Gl-ferreira** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
