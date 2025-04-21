@@ -19,6 +19,8 @@
 
 - Fluent in Portuguese and English; currently at B1 level in German and actively improving through WTW’s internal language program.
 
+
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/Gl-ferreira/Gl-ferreira/main/data%20science%20and%20energy.jpeg" width="500" alt="Energy AI Banner"/>
 </p>
