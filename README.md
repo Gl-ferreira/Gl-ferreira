@@ -21,8 +21,8 @@
 - Fluent in Portuguese and English; currently at B1 level in German and actively improving through WTW’s internal language program.
 
 </td>
-    <td>
-      <img src="[https://github.com/Gl-ferreira/Gl-ferreira/blob/main/data%20science%20and%20energy.jpeg)" width="300"/>
-    </td>
-  </tr>
+<td>
+  <img src="https://raw.githubusercontent.com/Gl-ferreira/Gl-ferreira/main/data%20science%20and%20energy.jpeg" width="300"/>
+</td>
+</tr>
 </table>
