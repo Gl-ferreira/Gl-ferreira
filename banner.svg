@@ -1,64 +1,61 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200" width="900" height="200" role="img" aria-label="A molecule network turning into a line chart and bar chart">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200" width="900" height="200" role="img" aria-label="A DNA helix flowing into a line chart and bar chart">
   <style>
-    .bond { stroke: #8b949e; stroke-width: 2; stroke-linecap: round; opacity: .55; }
-    .node { fill: #2E9E6A; }
-    .node.alt { fill: #8b949e; }
-    .flow { stroke: #2E9E6A; stroke-width: 2; stroke-dasharray: 2 8; fill: none; opacity: .6;
-            animation: flow 1.2s linear infinite; }
+    .flow { stroke: #58A6FF; stroke-width: 2; stroke-dasharray: 2 8; fill: none; opacity: .6; animation: flow 1.2s linear infinite; }
     .axis { stroke: #8b949e; stroke-width: 1.5; opacity: .5; }
-    .line { stroke: #2E9E6A; stroke-width: 3; fill: none; stroke-linecap: round; stroke-linejoin: round;
+    .line { stroke: #58A6FF; stroke-width: 3; fill: none; stroke-linecap: round; stroke-linejoin: round;
             stroke-dasharray: 520; stroke-dashoffset: 0; animation: draw 6s ease-in-out infinite; }
-    .dot { fill: #2E9E6A; opacity: 1; animation: dot 6s ease-in-out infinite; }
-    .bar { fill: #2E9E6A; opacity: .35; transform-box: fill-box; transform-origin: bottom;
-           transform: scaleY(1); animation: grow 6s ease-in-out infinite; }
-    .pulse { transform-box: fill-box; transform-origin: center; animation: pulse 3s ease-in-out infinite; }
-    .d1 { animation-delay: .2s; } .d2 { animation-delay: .4s; } .d3 { animation-delay: .6s; }
-    .d4 { animation-delay: .8s; } .d5 { animation-delay: 1s; }  .d6 { animation-delay: 1.2s; }
-    @keyframes flow  { to { stroke-dashoffset: -20; } }
-    @keyframes draw  { 0%, 10% { stroke-dashoffset: 520; } 55%, 85% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: 520; } }
-    @keyframes dot   { 0%, 50% { opacity: 0; } 58%, 85% { opacity: 1; } 100% { opacity: 0; } }
-    @keyframes grow  { 0%, 15% { transform: scaleY(0); } 45%, 85% { transform: scaleY(1); } 100% { transform: scaleY(0); } }
-    @keyframes pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.35); opacity: .7; } }
-    @media (prefers-reduced-motion: reduce) {
-      .flow, .pulse { animation: none; }
-      .line { animation: none; stroke-dashoffset: 0; }
-      .dot { animation: none; opacity: 1; }
-      .bar { animation: none; transform: scaleY(1); }
-    }
+    .dot { fill: #58A6FF; opacity: 1; animation: dot 6s ease-in-out infinite; }
+    .bar { fill: #58A6FF; opacity: .3; transform-box: fill-box; transform-origin: bottom; transform: scaleY(1); animation: grow 6s ease-in-out infinite; }
+    .d1 { animation-delay: .2s; } .d2 { animation-delay: .4s; } .d3 { animation-delay: .6s; } .d4 { animation-delay: .8s; } .d5 { animation-delay: 1s; }
+    @keyframes flow { to { stroke-dashoffset: -20; } }
+    @keyframes draw { 0%, 10% { stroke-dashoffset: 520; } 55%, 85% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: 520; } }
+    @keyframes dot  { 0%, 50% { opacity: 0; } 58%, 85% { opacity: 1; } 100% { opacity: 0; } }
+    @keyframes grow { 0%, 15% { transform: scaleY(0); } 45%, 85% { transform: scaleY(1); } 100% { transform: scaleY(0); } }
+    @media (prefers-reduced-motion: reduce) { .flow, .line, .dot, .bar { animation: none; } }
   </style>
 
-  <!-- Molecule: hexagonal ring with side chains -->
-  <g transform="translate(150 100)">
-    <g>
-      <line class="bond" x1="0" y1="-40" x2="34.6" y2="-20"/>
-      <line class="bond" x1="34.6" y1="-20" x2="34.6" y2="20"/>
-      <line class="bond" x1="34.6" y1="20" x2="0" y2="40"/>
-      <line class="bond" x1="0" y1="40" x2="-34.6" y2="20"/>
-      <line class="bond" x1="-34.6" y1="20" x2="-34.6" y2="-20"/>
-      <line class="bond" x1="-34.6" y1="-20" x2="0" y2="-40"/>
-      <line class="bond" x1="26" y1="-15" x2="26" y2="15"/>
-      <line class="bond" x1="-26" y1="15" x2="-26" y2="-15"/>
-      <line class="bond" x1="0" y1="-40" x2="0" y2="-75"/>
-      <line class="bond" x1="0" y1="-75" x2="30" y2="-92"/>
-      <line class="bond" x1="-34.6" y1="20" x2="-70" y2="40"/>
-      <line class="bond" x1="34.6" y1="20" x2="70" y2="40"/>
-      <line class="bond" x1="70" y1="40" x2="105" y2="20"/>
-    </g>
-    <circle class="node pulse"     cx="0"     cy="-40" r="6"/>
-    <circle class="node pulse d1"  cx="34.6"  cy="-20" r="6"/>
-    <circle class="node pulse d2"  cx="34.6"  cy="20"  r="6"/>
-    <circle class="node pulse d3"  cx="0"     cy="40"  r="6"/>
-    <circle class="node pulse d4"  cx="-34.6" cy="20"  r="6"/>
-    <circle class="node pulse d5"  cx="-34.6" cy="-20" r="6"/>
-    <circle class="node alt pulse d6" cx="0"  cy="-75" r="5"/>
-    <circle class="node alt pulse d2" cx="30" cy="-92" r="5"/>
-    <circle class="node alt pulse d4" cx="-70" cy="40" r="5"/>
-    <circle class="node alt pulse d1" cx="70" cy="40"  r="5"/>
-    <circle class="node pulse d3"  cx="105"  cy="20"  r="6"/>
+  <!-- DNA double helix -->
+  <g>
+    <line x1="50" x2="50" y1="100.0" y2="100.0" stroke="#8b949e" stroke-width="2" opacity=".45"><animate attributeName="y1" dur="4s" repeatCount="indefinite" values="100.0;121.0;136.4;142.0;136.4;121.0;100.0;79.0;63.6;58.0;63.6;79.0;100.0"/><animate attributeName="y2" dur="4s" repeatCount="indefinite" values="100.0;79.0;63.6;58.0;63.6;79.0;100.0;121.0;136.4;142.0;136.4;121.0;100.0"/></line>
+    <circle cx="50" cy="100.0" r="7.0" fill="#58A6FF"><animate attributeName="cy" dur="4s" repeatCount="indefinite" values="100.0;121.0;136.4;142.0;136.4;121.0;100.0;79.0;63.6;58.0;63.6;79.0;100.0"/><animate attributeName="r" dur="4s" repeatCount="indefinite" values="7.0;6.7;6.0;5.0;4.0;3.3;3.0;3.3;4.0;5.0;6.0;6.7;7.0"/></circle>
+    <circle cx="50" cy="100.0" r="3.0" fill="#A5D6FF"><animate attributeName="cy" dur="4s" repeatCount="indefinite" values="100.0;79.0;63.6;58.0;63.6;79.0;100.0;121.0;136.4;142.0;136.4;121.0;100.0"/><animate attributeName="r" dur="4s" repeatCount="indefinite" values="3.0;3.3;4.0;5.0;6.0;6.7;7.0;6.7;6.0;5.0;4.0;3.3;3.0"/></circle>
+    <line x1="74" x2="74" y1="120.9" y2="79.1" stroke="#8b949e" stroke-width="2" opacity=".45"><animate attributeName="y1" dur="4s" repeatCount="indefinite" values="120.9;136.3;142.0;136.4;121.1;100.2;79.1;63.7;58.0;63.6;78.9;99.8;120.9"/><animate attributeName="y2" dur="4s" repeatCount="indefinite" values="79.1;63.7;58.0;63.6;78.9;99.8;120.9;136.3;142.0;136.4;121.1;100.2;79.1"/></line>
+    <circle cx="74" cy="120.9" r="6.7" fill="#58A6FF"><animate attributeName="cy" dur="4s" repeatCount="indefinite" values="120.9;136.3;142.0;136.4;121.1;100.2;79.1;63.7;58.0;63.6;78.9;99.8;120.9"/><animate attributeName="r" dur="4s" repeatCount="indefinite" values="6.7;6.0;5.0;4.0;3.3;3.0;3.3;4.0;5.0;6.0;6.7;7.0;6.7"/></circle>
+    <circle cx="74" cy="79.1" r="3.3" fill="#A5D6FF"><animate attributeName="cy" dur="4s" repeatCount="indefinite" values="79.1;63.7;58.0;63.6;78.9;99.8;120.9;136.3;142.0;136.4;121.1;100.2;79.1"/><animate attributeName="r" dur="4s" repeatCount="indefinite" values="3.3;4.0;5.0;6.0;6.7;7.0;6.7;6.0;5.0;4.0;3.3;3.0;3.3"/></circle>
+    <line x1="98" x2="98" y1="136.2" y2="63.8" stroke="#8b949e" stroke-width="2" opacity=".45"><animate attributeName="y1" dur="4s" repeatCount="indefinite" values="136.2;142.0;136.5;121.3;100.3;79.3;63.8;58.0;63.5;78.7;99.7;120.7;136.2"/><animate attributeName="y2" dur="4s" repeatCount="indefinite" values="63.8;58.0;63.5;78.7;99.7;120.7;136.2;142.0;136.5;121.3;100.3;79.3;63.8"/></line>
+    <circle cx="98" cy="136.2" r="6.0" fill="#58A6FF"><animate attributeName="cy" dur="4s" repeatCount="indefinite" values="136.2;142.0;136.5;121.3;100.3;79.3;63.8;58.0;63.5;78.7;99.7;120.7;136.2"/><animate attributeName="r" dur="4s" repeatCount="indefinite" values="6.0;5.0;4.0;3.3;3.0;3.3;4.0;5.0;6.0;6.7;7.0;6.7;6.0"/></circle>
+    <circle cx="98" cy="63.8" r="4.0" fill="#A5D6FF"><animate attributeName="cy" dur="4s" repeatCount="indefinite" values="63.8;58.0;63.5;78.7;99.7;120.7;136.2;142.0;136.5;121.3;100.3;79.3;63.8"/><animate attributeName="r" dur="4s" repeatCount="indefinite" values="4.0;5.0;6.0;6.7;7.0;6.7;6.0;5.0;4.0;3.3;3.0;3.3;4.0"/></circle>
+    <line x1="122" x2="122" y1="142.0" y2="58.0" stroke="#8b949e" stroke-width="2" opacity=".45"><animate attributeName="y1" dur="4s" repeatCount="indefinite" values="142.0;136.6;121.4;100.5;79.4;63.9;58.0;63.4;78.6;99.5;120.6;136.1;142.0"/><animate attributeName="y2" dur="4s" repeatCount="indefinite" values="58.0;63.4;78.6;99.5;120.6;136.1;142.0;136.6;121.4;100.5;79.4;63.9;58.0"/></line>
+    <circle cx="122" cy="142.0" r="5.0" fill="#58A6FF"><animate attributeName="cy" dur="4s" repeatCount="indefinite" values="142.0;136.6;121.4;100.5;79.4;63.9;58.0;63.4;78.6;99.5;120.6;136.1;142.0"/><animate attributeName="r" dur="4s" repeatCount="indefinite" values="5.0;4.0;3.3;3.0;3.3;4.0;5.0;6.0;6.7;7.0;6.7;6.0;5.0"/></circle>
+    <circle cx="122" cy="58.0" r="5.0" fill="#A5D6FF"><animate attributeName="cy" dur="4s" repeatCount="indefinite" values="58.0;63.4;78.6;99.5;120.6;136.1;142.0;136.6;121.4;100.5;79.4;63.9;58.0"/><animate attributeName="r" dur="4s" repeatCount="indefinite" values="5.0;6.0;6.7;7.0;6.7;6.0;5.0;4.0;3.3;3.0;3.3;4.0;5.0"/></circle>
+    <line x1="146" x2="146" y1="136.7" y2="63.3" stroke="#8b949e" stroke-width="2" opacity=".45"><animate attributeName="y1" dur="4s" repeatCount="indefinite" values="136.7;121.5;100.6;79.5;63.9;58.0;63.3;78.5;99.4;120.5;136.1;142.0;136.7"/><animate attributeName="y2" dur="4s" repeatCount="indefinite" values="63.3;78.5;99.4;120.5;136.1;142.0;136.7;121.5;100.6;79.5;63.9;58.0;63.3"/></line>
+    <circle cx="146" cy="136.7" r="4.0" fill="#58A6FF"><animate attributeName="cy" dur="4s" repeatCount="indefinite" values="136.7;121.5;100.6;79.5;63.9;58.0;63.3;78.5;99.4;120.5;136.1;142.0;136.7"/><animate attributeName="r" dur="4s" repeatCount="indefinite" values="4.0;3.3;3.0;3.3;4.0;5.0;6.0;6.7;7.0;6.7;6.0;5.0;4.0"/></circle>
+    <circle cx="146" cy="63.3" r="6.0" fill="#A5D6FF"><animate attributeName="cy" dur="4s" repeatCount="indefinite" values="63.3;78.5;99.4;120.5;136.1;142.0;136.7;121.5;100.6;79.5;63.9;58.0;63.3"/><animate attributeName="r" dur="4s" repeatCount="indefinite" values="6.0;6.7;7.0;6.7;6.0;5.0;4.0;3.3;3.0;3.3;4.0;5.0;6.0"/></circle>
+    <line x1="170" x2="170" y1="121.7" y2="78.3" stroke="#8b949e" stroke-width="2" opacity=".45"><animate attributeName="y1" dur="4s" repeatCount="indefinite" values="121.7;100.8;79.7;64.0;58.0;63.3;78.3;99.2;120.3;136.0;142.0;136.7;121.7"/><animate attributeName="y2" dur="4s" repeatCount="indefinite" values="78.3;99.2;120.3;136.0;142.0;136.7;121.7;100.8;79.7;64.0;58.0;63.3;78.3"/></line>
+    <circle cx="170" cy="121.7" r="3.3" fill="#58A6FF"><animate attributeName="cy" dur="4s" repeatCount="indefinite" values="121.7;100.8;79.7;64.0;58.0;63.3;78.3;99.2;120.3;136.0;142.0;136.7;121.7"/><animate attributeName="r" dur="4s" repeatCount="indefinite" values="3.3;3.0;3.3;4.0;5.0;6.0;6.7;7.0;6.7;6.0;5.0;4.0;3.3"/></circle>
+    <circle cx="170" cy="78.3" r="6.7" fill="#A5D6FF"><animate attributeName="cy" dur="4s" repeatCount="indefinite" values="78.3;99.2;120.3;136.0;142.0;136.7;121.7;100.8;79.7;64.0;58.0;63.3;78.3"/><animate attributeName="r" dur="4s" repeatCount="indefinite" values="6.7;7.0;6.7;6.0;5.0;4.0;3.3;3.0;3.3;4.0;5.0;6.0;6.7"/></circle>
+    <line x1="194" x2="194" y1="100.9" y2="99.1" stroke="#8b949e" stroke-width="2" opacity=".45"><animate attributeName="y1" dur="4s" repeatCount="indefinite" values="100.9;79.8;64.1;58.0;63.2;78.2;99.1;120.2;135.9;142.0;136.8;121.8;100.9"/><animate attributeName="y2" dur="4s" repeatCount="indefinite" values="99.1;120.2;135.9;142.0;136.8;121.8;100.9;79.8;64.1;58.0;63.2;78.2;99.1"/></line>
+    <circle cx="194" cy="100.9" r="3.0" fill="#58A6FF"><animate attributeName="cy" dur="4s" repeatCount="indefinite" values="100.9;79.8;64.1;58.0;63.2;78.2;99.1;120.2;135.9;142.0;136.8;121.8;100.9"/><animate attributeName="r" dur="4s" repeatCount="indefinite" values="3.0;3.2;4.0;5.0;6.0;6.7;7.0;6.8;6.0;5.0;4.0;3.3;3.0"/></circle>
+    <circle cx="194" cy="99.1" r="7.0" fill="#A5D6FF"><animate attributeName="cy" dur="4s" repeatCount="indefinite" values="99.1;120.2;135.9;142.0;136.8;121.8;100.9;79.8;64.1;58.0;63.2;78.2;99.1"/><animate attributeName="r" dur="4s" repeatCount="indefinite" values="7.0;6.8;6.0;5.0;4.0;3.3;3.0;3.2;4.0;5.0;6.0;6.7;7.0"/></circle>
+    <line x1="218" x2="218" y1="79.9" y2="120.1" stroke="#8b949e" stroke-width="2" opacity=".45"><animate attributeName="y1" dur="4s" repeatCount="indefinite" values="79.9;64.2;58.0;63.1;78.1;98.9;120.1;135.8;142.0;136.9;121.9;101.1;79.9"/><animate attributeName="y2" dur="4s" repeatCount="indefinite" values="120.1;135.8;142.0;136.9;121.9;101.1;79.9;64.2;58.0;63.1;78.1;98.9;120.1"/></line>
+    <circle cx="218" cy="79.9" r="3.2" fill="#58A6FF"><animate attributeName="cy" dur="4s" repeatCount="indefinite" values="79.9;64.2;58.0;63.1;78.1;98.9;120.1;135.8;142.0;136.9;121.9;101.1;79.9"/><animate attributeName="r" dur="4s" repeatCount="indefinite" values="3.2;4.0;4.9;6.0;6.7;7.0;6.8;6.0;5.1;4.0;3.3;3.0;3.2"/></circle>
+    <circle cx="218" cy="120.1" r="6.8" fill="#A5D6FF"><animate attributeName="cy" dur="4s" repeatCount="indefinite" values="120.1;135.8;142.0;136.9;121.9;101.1;79.9;64.2;58.0;63.1;78.1;98.9;120.1"/><animate attributeName="r" dur="4s" repeatCount="indefinite" values="6.8;6.0;5.1;4.0;3.3;3.0;3.2;4.0;4.9;6.0;6.7;7.0;6.8"/></circle>
+    <line x1="242" x2="242" y1="64.2" y2="135.8" stroke="#8b949e" stroke-width="2" opacity=".45"><animate attributeName="y1" dur="4s" repeatCount="indefinite" values="64.2;58.0;63.0;78.0;98.8;119.9;135.8;142.0;137.0;122.0;101.2;80.1;64.2"/><animate attributeName="y2" dur="4s" repeatCount="indefinite" values="135.8;142.0;137.0;122.0;101.2;80.1;64.2;58.0;63.0;78.0;98.8;119.9;135.8"/></line>
+    <circle cx="242" cy="64.2" r="4.0" fill="#58A6FF"><animate attributeName="cy" dur="4s" repeatCount="indefinite" values="64.2;58.0;63.0;78.0;98.8;119.9;135.8;142.0;137.0;122.0;101.2;80.1;64.2"/><animate attributeName="r" dur="4s" repeatCount="indefinite" values="4.0;4.9;5.9;6.7;7.0;6.8;6.0;5.1;4.1;3.3;3.0;3.2;4.0"/></circle>
+    <circle cx="242" cy="135.8" r="6.0" fill="#A5D6FF"><animate attributeName="cy" dur="4s" repeatCount="indefinite" values="135.8;142.0;137.0;122.0;101.2;80.1;64.2;58.0;63.0;78.0;98.8;119.9;135.8"/><animate attributeName="r" dur="4s" repeatCount="indefinite" values="6.0;5.1;4.1;3.3;3.0;3.2;4.0;4.9;5.9;6.7;7.0;6.8;6.0"/></circle>
+    <line x1="266" x2="266" y1="58.0" y2="142.0" stroke="#8b949e" stroke-width="2" opacity=".45"><animate attributeName="y1" dur="4s" repeatCount="indefinite" values="58.0;63.0;77.8;98.6;119.8;135.7;142.0;137.0;122.2;101.4;80.2;64.3;58.0"/><animate attributeName="y2" dur="4s" repeatCount="indefinite" values="142.0;137.0;122.2;101.4;80.2;64.3;58.0;63.0;77.8;98.6;119.8;135.7;142.0"/></line>
+    <circle cx="266" cy="58.0" r="4.9" fill="#58A6FF"><animate attributeName="cy" dur="4s" repeatCount="indefinite" values="58.0;63.0;77.8;98.6;119.8;135.7;142.0;137.0;122.2;101.4;80.2;64.3;58.0"/><animate attributeName="r" dur="4s" repeatCount="indefinite" values="4.9;5.9;6.7;7.0;6.8;6.1;5.1;4.1;3.3;3.0;3.2;3.9;4.9"/></circle>
+    <circle cx="266" cy="142.0" r="5.1" fill="#A5D6FF"><animate attributeName="cy" dur="4s" repeatCount="indefinite" values="142.0;137.0;122.2;101.4;80.2;64.3;58.0;63.0;77.8;98.6;119.8;135.7;142.0"/><animate attributeName="r" dur="4s" repeatCount="indefinite" values="5.1;4.1;3.3;3.0;3.2;3.9;4.9;5.9;6.7;7.0;6.8;6.1;5.1"/></circle>
+    <line x1="290" x2="290" y1="62.9" y2="137.1" stroke="#8b949e" stroke-width="2" opacity=".45"><animate attributeName="y1" dur="4s" repeatCount="indefinite" values="62.9;77.7;98.5;119.7;135.6;142.0;137.1;122.3;101.5;80.3;64.4;58.0;62.9"/><animate attributeName="y2" dur="4s" repeatCount="indefinite" values="137.1;122.3;101.5;80.3;64.4;58.0;62.9;77.7;98.5;119.7;135.6;142.0;137.1"/></line>
+    <circle cx="290" cy="62.9" r="5.9" fill="#58A6FF"><animate attributeName="cy" dur="4s" repeatCount="indefinite" values="62.9;77.7;98.5;119.7;135.6;142.0;137.1;122.3;101.5;80.3;64.4;58.0;62.9"/><animate attributeName="r" dur="4s" repeatCount="indefinite" values="5.9;6.7;7.0;6.8;6.1;5.1;4.1;3.3;3.0;3.2;3.9;4.9;5.9"/></circle>
+    <circle cx="290" cy="137.1" r="4.1" fill="#A5D6FF"><animate attributeName="cy" dur="4s" repeatCount="indefinite" values="137.1;122.3;101.5;80.3;64.4;58.0;62.9;77.7;98.5;119.7;135.6;142.0;137.1"/><animate attributeName="r" dur="4s" repeatCount="indefinite" values="4.1;3.3;3.0;3.2;3.9;4.9;5.9;6.7;7.0;6.8;6.1;5.1;4.1"/></circle>
+    <line x1="314" x2="314" y1="77.6" y2="122.4" stroke="#8b949e" stroke-width="2" opacity=".45"><animate attributeName="y1" dur="4s" repeatCount="indefinite" values="77.6;98.3;119.5;135.5;142.0;137.2;122.4;101.7;80.5;64.5;58.0;62.8;77.6"/><animate attributeName="y2" dur="4s" repeatCount="indefinite" values="122.4;101.7;80.5;64.5;58.0;62.8;77.6;98.3;119.5;135.5;142.0;137.2;122.4"/></line>
+    <circle cx="314" cy="77.6" r="6.7" fill="#58A6FF"><animate attributeName="cy" dur="4s" repeatCount="indefinite" values="77.6;98.3;119.5;135.5;142.0;137.2;122.4;101.7;80.5;64.5;58.0;62.8;77.6"/><animate attributeName="r" dur="4s" repeatCount="indefinite" values="6.7;7.0;6.8;6.1;5.1;4.1;3.3;3.0;3.2;3.9;4.9;5.9;6.7"/></circle>
+    <circle cx="314" cy="122.4" r="3.3" fill="#A5D6FF"><animate attributeName="cy" dur="4s" repeatCount="indefinite" values="122.4;101.7;80.5;64.5;58.0;62.8;77.6;98.3;119.5;135.5;142.0;137.2;122.4"/><animate attributeName="r" dur="4s" repeatCount="indefinite" values="3.3;3.0;3.2;3.9;4.9;5.9;6.7;7.0;6.8;6.1;5.1;4.1;3.3"/></circle>
   </g>
 
-  <!-- Flow from molecule into the chart -->
-  <path class="flow" d="M 262 120 C 320 120, 340 100, 400 100"/>
+  <!-- Flow from the helix into the chart -->
+  <path class="flow" d="M 340 100 C 370 100, 380 100, 400 100"/>
 
   <!-- Chart -->
   <g transform="translate(420 30)">
