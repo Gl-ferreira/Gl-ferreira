@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200" width="900" height="200" role="img" aria-label="A molecule network turning into a line chart and bar chart">
+  <style>
+    .bond { stroke: #8b949e; stroke-width: 2; stroke-linecap: round; opacity: .55; }
+    .node { fill: #2E9E6A; }
+    .node.alt { fill: #8b949e; }
+    .flow { stroke: #2E9E6A; stroke-width: 2; stroke-dasharray: 2 8; fill: none; opacity: .6;
+            animation: flow 1.2s linear infinite; }
+    .axis { stroke: #8b949e; stroke-width: 1.5; opacity: .5; }
+    .line { stroke: #2E9E6A; stroke-width: 3; fill: none; stroke-linecap: round; stroke-linejoin: round;
+            stroke-dasharray: 520; stroke-dashoffset: 0; animation: draw 6s ease-in-out infinite; }
+    .dot { fill: #2E9E6A; opacity: 1; animation: dot 6s ease-in-out infinite; }
+    .bar { fill: #2E9E6A; opacity: .35; transform-box: fill-box; transform-origin: bottom;
+           transform: scaleY(1); animation: grow 6s ease-in-out infinite; }
+    .pulse { transform-box: fill-box; transform-origin: center; animation: pulse 3s ease-in-out infinite; }
+    .d1 { animation-delay: .2s; } .d2 { animation-delay: .4s; } .d3 { animation-delay: .6s; }
+    .d4 { animation-delay: .8s; } .d5 { animation-delay: 1s; }  .d6 { animation-delay: 1.2s; }
+    @keyframes flow  { to { stroke-dashoffset: -20; } }
+    @keyframes draw  { 0%, 10% { stroke-dashoffset: 520; } 55%, 85% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: 520; } }
+    @keyframes dot   { 0%, 50% { opacity: 0; } 58%, 85% { opacity: 1; } 100% { opacity: 0; } }
+    @keyframes grow  { 0%, 15% { transform: scaleY(0); } 45%, 85% { transform: scaleY(1); } 100% { transform: scaleY(0); } }
+    @keyframes pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.35); opacity: .7; } }
+    @media (prefers-reduced-motion: reduce) {
+      .flow, .pulse { animation: none; }
+      .line { animation: none; stroke-dashoffset: 0; }
+      .dot { animation: none; opacity: 1; }
+      .bar { animation: none; transform: scaleY(1); }
+    }
+  </style>
+
+  <!-- Molecule: hexagonal ring with side chains -->
+  <g transform="translate(150 100)">
+    <g>
+      <line class="bond" x1="0" y1="-40" x2="34.6" y2="-20"/>
+      <line class="bond" x1="34.6" y1="-20" x2="34.6" y2="20"/>
+      <line class="bond" x1="34.6" y1="20" x2="0" y2="40"/>
+      <line class="bond" x1="0" y1="40" x2="-34.6" y2="20"/>
+      <line class="bond" x1="-34.6" y1="20" x2="-34.6" y2="-20"/>
+      <line class="bond" x1="-34.6" y1="-20" x2="0" y2="-40"/>
+      <line class="bond" x1="26" y1="-15" x2="26" y2="15"/>
+      <line class="bond" x1="-26" y1="15" x2="-26" y2="-15"/>
+      <line class="bond" x1="0" y1="-40" x2="0" y2="-75"/>
+      <line class="bond" x1="0" y1="-75" x2="30" y2="-92"/>
+      <line class="bond" x1="-34.6" y1="20" x2="-70" y2="40"/>
+      <line class="bond" x1="34.6" y1="20" x2="70" y2="40"/>
+      <line class="bond" x1="70" y1="40" x2="105" y2="20"/>
+    </g>
+    <circle class="node pulse"     cx="0"     cy="-40" r="6"/>
+    <circle class="node pulse d1"  cx="34.6"  cy="-20" r="6"/>
+    <circle class="node pulse d2"  cx="34.6"  cy="20"  r="6"/>
+    <circle class="node pulse d3"  cx="0"     cy="40"  r="6"/>
+    <circle class="node pulse d4"  cx="-34.6" cy="20"  r="6"/>
+    <circle class="node pulse d5"  cx="-34.6" cy="-20" r="6"/>
+    <circle class="node alt pulse d6" cx="0"  cy="-75" r="5"/>
+    <circle class="node alt pulse d2" cx="30" cy="-92" r="5"/>
+    <circle class="node alt pulse d4" cx="-70" cy="40" r="5"/>
+    <circle class="node alt pulse d1" cx="70" cy="40"  r="5"/>
+    <circle class="node pulse d3"  cx="105"  cy="20"  r="6"/>
+  </g>
+
+  <!-- Flow from molecule into the chart -->
+  <path class="flow" d="M 262 120 C 320 120, 340 100, 400 100"/>
+
+  <!-- Chart -->
+  <g transform="translate(420 30)">
+    <line class="axis" x1="0" y1="140" x2="440" y2="140"/>
+    <line class="axis" x1="0" y1="0" x2="0" y2="140"/>
+    <rect class="bar"    x="25"  y="95" width="34" height="45" rx="3"/>
+    <rect class="bar d1" x="95"  y="80" width="34" height="60" rx="3"/>
+    <rect class="bar d2" x="165" y="88" width="34" height="52" rx="3"/>
+    <rect class="bar d3" x="235" y="62" width="34" height="78" rx="3"/>
+    <rect class="bar d4" x="305" y="48" width="34" height="92" rx="3"/>
+    <rect class="bar d5" x="375" y="30" width="34" height="110" rx="3"/>
+    <polyline class="line" points="42,85 112,70 182,78 252,50 322,36 392,18"/>
+    <circle class="dot" cx="392" cy="18" r="6"/>
+  </g>
+</svg>
