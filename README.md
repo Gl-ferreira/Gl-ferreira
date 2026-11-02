@@ -16,7 +16,7 @@
 
 ---
 
-## $\color{#58A6FF}\textsf{About}$
+<h2><img src="titles/about.svg" height="34" alt="About" /></h2>
 
 I studied management at Católica Porto, then moved into data. I did an MSc in Data Science and Advanced Analytics at NOVA IMS while working as a junior actuarial analyst at WTW on German pension evaluations. My thesis forecast renewable energy production in Madeira, where I grew up, and is now the basis of a journal article under review. Today I work as an Associate Data Analyst at Amgen in Lisbon, and I'm growing towards full-stack data science and ML engineering.
 
@@ -25,7 +25,7 @@ I studied management at Católica Porto, then moved into data. I did an MSc in D
 - **Article:** with my supervisors Maria Anastasiadou and Vitor Santos, **under review** at *Cleaner Energy Systems* (Elsevier)
 - **Languages:** Portuguese (native) · English · German (B1, improving)
 
-## $\color{#58A6FF}\textsf{Tech stack}$
+<h2><img src="titles/tech-stack.svg" height="34" alt="Tech stack" /></h2>
 
 <p>
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
@@ -41,7 +41,7 @@ I studied management at Católica Porto, then moved into data. I did an MSc in D
 
 **Areas:** machine learning · time series forecasting · predictive modelling · clustering · reinforcement learning · relational databases · data preparation and validation
 
-## $\color{#58A6FF}\textsf{Featured project}$
+<h2><img src="titles/featured-project.svg" height="34" alt="Featured project" /></h2>
 
 ### [Forecasting renewable energy production in Madeira Island](https://github.com/Gl-ferreira/forecasting-renewable-energy-production-madeira-island)
 
@@ -51,7 +51,7 @@ I studied management at Católica Porto, then moved into data. I did an MSc in D
 - **Data:** the real utility data is confidential, so the repo runs the full pipeline end to end on synthetic data
 - **Status:** article **under review** at *Cleaner Energy Systems*
 
-## $\color{#58A6FF}\textsf{Other projects}$
+<h2><img src="titles/other-projects.svg" height="34" alt="Other projects" /></h2>
 
 | Project | About |
 |---|---|
