@@ -18,11 +18,11 @@
 
 <h2><img src="titles/about.svg" height="34" alt="About" /></h2>
 
-<samp>I'm a data analyst at Amgen in Lisbon, working on demand and revenue forecasting across several markets alongside finance, supply and project management teams. I joined without a pharma background, and learning the business, from tenders to loss of exclusivity, has been one of the best parts of the job.</samp>
+I'm a data analyst at Amgen in Lisbon, working on demand and revenue forecasting across several markets alongside finance, supply and project management teams. I joined without a pharma background, and learning the business, from tenders to loss of exclusivity, has been one of the best parts of the job.
 
-<samp>I've always been fascinated by how data can turn uncertainty into insight. My MSc thesis was where I first put that into practice: I grew up in Madeira, so I used machine learning to forecast the island's renewable energy production. It showed me how data and technology can generate knowledge and help build a better, more sustainable world.</samp>
+I've always been fascinated by how data can turn uncertainty into insight. My MSc thesis was where I first put that into practice: I grew up in Madeira, so I used machine learning to forecast the island's renewable energy production. It showed me how data and technology can generate knowledge and help build a better, more sustainable world.
 
-<samp>Before Amgen, I studied management at Católica Porto, then did my MSc in Data Science and Advanced Analytics at NOVA IMS. While writing my thesis, I worked at WTW as an actuarial analyst on German pension valuations for large corporate clients. I'm happiest when I'm learning, or using data and technology to solve a problem or at least reduce its risk, and I keep up with a fast-moving field through reading and side projects.</samp>
+Before Amgen, I studied management at Católica Porto, then did my MSc in Data Science and Advanced Analytics at NOVA IMS. While writing my thesis, I worked at WTW as an actuarial analyst on German pension valuations for large corporate clients. I'm happiest when I'm learning, or using data and technology to solve a problem or at least reduce its risk, and I keep up with a fast-moving field through reading and side projects.
 
 **At Amgen**
 
